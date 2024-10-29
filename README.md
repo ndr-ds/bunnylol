@@ -1,10 +1,8 @@
 # Andre's BunnyLOL
 
-While I was at Facebook, I heavily used the internally developed tool `bunnylol`. I found several other versions of `bunnylol` that required me to host a server. This version of `bunnylol` *does not* need to be hosted on a server.
+This version of `bunnylol` *does not* need to be hosted on a server.
 
-Currently, this is hosted on [http://andresilva91.github.io/bunnylol](http://andresilva91.github.io/bunnylol). However, you can host it on any website that you would like (even on GitHub Pages). Since this is going to be your primary search engine for every new tab you open, I would suggest that you don't host it somewhere that may take a while to spin up the static page (like Heroku where your VM could go to sleep).
-
-A note: a lot of these commands are customized for me. It is probably most beneficial for you to fork this repo and add/remove commands so that it is optimized for commands you actually need.
+Currently, this is hosted on my GitHub Pages [http://andresilva91.github.io/bunnylol](http://andresilva91.github.io/bunnylol). However, you can host it on any website that you would like. Since this is going to be your primary search engine for every new tab you open, I would suggest that you don't host it somewhere that may take a while to spin up the static page (like Heroku where your VM could go to sleep).
 
 ## Example Commands
 
@@ -30,9 +28,11 @@ DEFAULT | Default - Google Search | [https://google.com/](https://google.com/)
 
 2. Open up the `src/commands.js` file. Add your command to the `COMMANDS` object. You must include a `name` and `url` attribute and you can add an additional `searchurl` attribute if you would to be able to type a command like `yt NBA Highlights` (in which case, `bunnylol` will automatically search for NBA Highlights on YouTube).
 
-3. Run `npm run prepublish`.
+3. Run `npm run build && npm run bundle && npm run minify && npm run flow`
 
-4. Publish to your website.
+4. Push the commit
+
+5. GitHub Pages should pick it up within a couple minutes
 
 ## Running locally
 
