@@ -71,17 +71,17 @@ export const COMMANDS: { [CommandNames]: CommandType } = {
     },
     ghgs: {
         name: "GitHub Global Search",
-        url: "https://github.com/",
+        url: "https://www.github.com/search?q=",
         searchurl: "https://www.github.com/search?q="
     },
     ghs: {
         name: "GitHub Search",
-        url: "https://github.com/",
+        url: "https://github.com/linera-io/linera-protocol/search?q=",
         searchurl: "https://github.com/linera-io/linera-protocol/search?q="
     },
     gh: {
         name: "GitHub PRs/Issues",
-        url: "https://github.com/",
+        url: "https://github.com/linera-io/linera-protocol/pull/",
         searchurl: "https://github.com/linera-io/linera-protocol/pull/"
     },
     r: {
