@@ -6,7 +6,7 @@ export type CommandType = {|
             searchurl ?: string,
 |};
 
-export type CommandNames = 'fb' | 'm' | 'mw' | 'wa' | 'waw' | 'gm' | 'sis' | 'col' | 'yt' | 'tv' | 'gh' | 'ghs' | 'ghgs' | 'ghi' | 'ghp' | 'r' | 'l' | 'me' | 'ig' | 'tw' | 'tr' | 'vs' | 'todo' |
+export type CommandNames = 'fb' | 'm' | 'mw' | 'wa' | 'waw' | 'gm' | 'sis' | 'col' | 'yt' | 'tv' | 'gh' | 'ghs' | 'ghgs' | 'r' | 'l' | 'me' | 'ig' | 'tw' | 'tr' | 'vs' | 'todo' |
     'c' | 'wf' | '$' | 'cal' | 'uvacovid' | 'hs' | 'p' | 'n' | 'h' | 'pv' | 'gd' | 'wp' | 'wsj' | 'cnn' | 'wiki' | 'g' | 'DEFAULT';
 
 export type CommandDataTableType = {|
@@ -79,13 +79,8 @@ export const COMMANDS: { [CommandNames]: CommandType } = {
         url: "https://github.com/",
         searchurl: "https://github.com/linera-io/linera-protocol/search?q="
     },
-    ghi: {
-        name: "GitHub Issues",
-        url: "https://github.com/",
-        searchurl: "https://github.com/linera-io/linera-protocol/issues/"
-    },
-    ghp: {
-        name: "GitHub Pull Requests",
+    gh: {
+        name: "GitHub PRs/Issues",
         url: "https://github.com/",
         searchurl: "https://github.com/linera-io/linera-protocol/pull/"
     },
