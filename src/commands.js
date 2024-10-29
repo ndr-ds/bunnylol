@@ -22,13 +22,13 @@ export type ColumnDataTableType = {|
 export const COMMANDS: { [CommandNames]: CommandType } = {
     ghgs: {
         name: "GitHub Global Search",
-        url: "https://www.github.com/search?q=",
-        searchurl: "https://www.github.com/search?q="
+        url: "https://www.github.com/search?type=code&q=",
+        searchurl: "https://www.github.com/search?type=code&q="
     },
     ghs: {
         name: "GitHub Search",
-        url: "https://github.com/linera-io/linera-protocol/search?q=",
-        searchurl: "https://github.com/linera-io/linera-protocol/search?q="
+        url: "https://github.com/linera-io/linera-protocol/search?type=code&q=",
+        searchurl: "https://github.com/linera-io/linera-protocol/search?type=code&q="
     },
     gh: {
         name: "GitHub PRs/Issues",
