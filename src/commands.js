@@ -1,26 +1,26 @@
 // @flow strict
 
 export type CommandType = {|
-    name: string, 
-    url: string, 
-    searchurl?: string,
+    name: string,
+        url: string,
+            searchurl ?: string,
 |};
 
-export type CommandNames = 'fb' | 'm' | 'mw' | 'wa' | 'waw' | 'gm' | 'sis' | 'col' | 'yt' | 'tv' | 'gh' | 'r' | 'l' | 'me' | 'ig' | 'tw' | 'tr' | 'vs' | 'todo' |
-                           'c' | 'wf' | '$' | 'cal' | 'uvacovid' | 'hs' | 'p' | 'n' | 'h' | 'pv' | 'gd' | 'wp' | 'wsj' | 'cnn' | 'wiki' | 'g' | 'DEFAULT';
+export type CommandNames = 'fb' | 'm' | 'mw' | 'wa' | 'waw' | 'gm' | 'sis' | 'col' | 'yt' | 'tv' | 'gh' | 'ghs' | 'ghgs' | 'ghi' | 'ghp' | 'r' | 'l' | 'me' | 'ig' | 'tw' | 'tr' | 'vs' | 'todo' |
+    'c' | 'wf' | '$' | 'cal' | 'uvacovid' | 'hs' | 'p' | 'n' | 'h' | 'pv' | 'gd' | 'wp' | 'wsj' | 'cnn' | 'wiki' | 'g' | 'DEFAULT';
 
 export type CommandDataTableType = {|
-    name: string, 
-    url: string, 
-    command: CommandNames
-|};
+    name: string,
+        url: string,
+            command: CommandNames
+                |};
 
-export type ColumnDataTableType = {| 
-    data: string, 
-    title: string 
-|};
+export type ColumnDataTableType = {|
+    data: string,
+        title: string
+            |};
 
-export const COMMANDS: {[CommandNames] : CommandType} = {
+export const COMMANDS: { [CommandNames]: CommandType } = {
     fb: {
         name: "Facebook",
         url: "https://facebook.com/",
@@ -69,10 +69,25 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
         name: "YouTube TV",
         url: "https://tv.youtube.com/",
     },
-    gh: {
-        name: "GitHub",
+    ghgs: {
+        name: "GitHub Global Search",
         url: "https://github.com/",
         searchurl: "https://www.github.com/search?q="
+    },
+    ghs: {
+        name: "GitHub Search",
+        url: "https://github.com/",
+        searchurl: "https://github.com/linera-io/linera-protocol/search?q="
+    },
+    ghi: {
+        name: "GitHub Issues",
+        url: "https://github.com/",
+        searchurl: "https://github.com/linera-io/linera-protocol/issues/"
+    },
+    ghp: {
+        name: "GitHub Pull Requests",
+        url: "https://github.com/",
+        searchurl: "https://github.com/linera-io/linera-protocol/pull/"
     },
     r: {
         name: "Reddit",
@@ -92,10 +107,6 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
         name: "Twitter",
         url: "https://twitter.com/",
         searchurl: "https://twitter.com/search?q="
-    },
-    me: {
-        name: "Rithik.me - Personal Website",
-        url: "https://rithik.me/me",
     },
     g: {
         name: "Google",
@@ -150,12 +161,12 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
     },
     $: {
         name: "Robinhood",
-        url: "https://robinhood.com/", 
+        url: "https://robinhood.com/",
         searchurl: "https://robinhood.com/stocks/"
     },
     c: {
         name: "Robinhood Crypto",
-        url: "https://robinhood.com/", 
+        url: "https://robinhood.com/",
         searchurl: "https://robinhood.com/crypto/"
     },
     cal: {
