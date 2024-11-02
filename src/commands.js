@@ -6,7 +6,7 @@ export type CommandType = {|
   searchurl?: string,
 |};
 
-export type CommandNames = "ghgs" | "ghs" | "gh" | "g" | "rust" | "DEFAULT";
+export type CommandNames = "ghgs" | "ghs" | "gh" | "g" | "rust" | "crate" | "DEFAULT";
 
 export type CommandDataTableType = {|
   name: string,
@@ -45,6 +45,11 @@ export const COMMANDS: { [CommandNames]: CommandType } = {
     name: "Rust Docs",
     url: "https://doc.rust-lang.org/std/?search=",
     searchurl: "https://doc.rust-lang.org/std/?search=",
+  },
+  crate: {
+    name: "Crates.io",
+    url: "https://crates.io/search?q=",
+    searchurl: "https://crates.io/search?q=",
   },
   DEFAULT: {
     name: "Default - Google Search",
