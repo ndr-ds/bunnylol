@@ -6,7 +6,16 @@ export type CommandType = {|
   searchurl?: string,
 |};
 
-export type CommandNames = "ghgs" | "ghs" | "gh" | "gt" | "g" | "r" | "c" | "DEFAULT";
+export type CommandNames =
+  | "ghgs"
+  | "ghs"
+  | "gh"
+  | "gt"
+  | "g"
+  | "r"
+  | "c"
+  | "gpt"
+  | "DEFAULT";
 
 export type CommandDataTableType = {|
   name: string,
@@ -55,6 +64,11 @@ export const COMMANDS: { [CommandNames]: CommandType } = {
     name: "Graphite",
     url: "https://app.graphite.dev/",
     searchurl: "https://app.graphite.dev/github/pr/linera-io/linera-protocol/",
+  },
+  gpt: {
+    name: "ChatGPT Engineer",
+    url: "https://chatgpt.com/g/g-5My0HwjEh-engineer",
+    searchurl: "https://chatgpt.com/g/g-5My0HwjEh-engineer",
   },
   DEFAULT: {
     name: "Default - Google Search",
