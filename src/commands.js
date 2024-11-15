@@ -13,6 +13,7 @@ export type CommandNames =
   | "gt"
   | "g"
   | "r"
+  | "rc"
   | "c"
   | "gpt"
   | "DEFAULT";
@@ -51,9 +52,14 @@ export const COMMANDS: { [CommandNames]: CommandType } = {
     searchurl: "https://www.google.com/search?q=",
   },
   r: {
-    name: "Rust Docs",
+    name: "Rust Standard Library Docs",
     url: "https://doc.rust-lang.org/std/",
     searchurl: "https://doc.rust-lang.org/std/?search=",
+  },
+  rc: {
+    name: "Rust Crate Docs",
+    url: "https://docs.rs/",
+    searchurl: "https://docs.rs/releases/search?query=",
   },
   c: {
     name: "Crates.io",
