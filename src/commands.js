@@ -12,10 +12,10 @@ export type CommandNames =
   | "gh"
   | "gt"
   | "g"
+  | "gpt"
   | "r"
   | "rc"
   | "c"
-  | "gpt"
   | "DEFAULT";
 
 export type CommandDataTableType = {|
@@ -51,6 +51,11 @@ export const COMMANDS: { [CommandNames]: CommandType } = {
     url: "https://google.com/",
     searchurl: "https://www.google.com/search?q=",
   },
+  gpt: {
+    name: "ChatGPT",
+    url: "https://chatgpt.com/",
+    searchurl: "https://chatgpt.com/?hints=search&q=",
+  },
   r: {
     name: "Rust Standard Library Docs",
     url: "https://doc.rust-lang.org/std/",
@@ -70,11 +75,6 @@ export const COMMANDS: { [CommandNames]: CommandType } = {
     name: "Graphite",
     url: "https://app.graphite.dev/",
     searchurl: "https://app.graphite.dev/github/pr/linera-io/linera-protocol/",
-  },
-  gpt: {
-    name: "ChatGPT Engineer",
-    url: "https://chatgpt.com/g/g-5My0HwjEh-engineer",
-    searchurl: "https://chatgpt.com/g/g-5My0HwjEh-engineer",
   },
   DEFAULT: {
     name: "Default - Google Search",
