@@ -54,7 +54,7 @@ export const COMMANDS: { [CommandNames]: CommandType } = {
   gpt: {
     name: "ChatGPT",
     url: "https://chatgpt.com/",
-    searchurl: "https://chatgpt.com/?hints=search&q=",
+    searchurl: "https://chatgpt.com/?model=o4-mini&q=",
   },
   r: {
     name: "Rust Standard Library Docs",
